@@ -3,8 +3,6 @@ global sHeight
 sWidth = 500
 sHeight = 500
 
-
-
 class player(object):
     def __init__(self):
         self.x  = 100
@@ -16,7 +14,7 @@ class player(object):
         self.speed = 5
         self.h = 20
         self.w = 20
-        
+       
     def show(self):
         fill(0)
         rect(self.x, self.y, self.w, self.h)
@@ -34,13 +32,7 @@ class player(object):
             self.y = (sHeight - self.h)
         if self.y >= 0:
             self.y += 1
-   
-        
-    
-   
-    
-        
-
+      
 def setup():
     size(sWidth, sHeight )
     global p
@@ -50,9 +42,7 @@ def draw():
     background(100)
     p.show()
     p.update()
-    fill(255)
-    rect(0, 400, 500, 200)
-    
+
 def keyPressed():
     if keyCode == UP:
         p.up = 1
